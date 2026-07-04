@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trader's Codex — The Complete Trading Encyclopedia</title>
+<meta name="description" content="A free, ad-free reference covering Indian markets, forex, crypto, technical analysis, risk management and trading psychology — written to be read cover to cover, or looked up one entry at a time.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://traderscodex.example/index.html">
+<meta property="og:site_name" content="Trader's Codex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trader's Codex — The Complete Trading Encyclopedia">
+<meta property="og:description" content="131 free, ad-free reference entries covering Indian markets, technical analysis, risk management, and trading psychology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">Trader's Codex <span class="mark">FOLIO Ø</span></a>
+    <nav class="topnav">
+      <a href="article.html?slug=introduction-to-financial-markets">Browse</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="article.html?slug=glossary">Glossary</a>
+      <a href="article.html?slug=faq">FAQ</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="search-trigger" onclick="openSearch()">
+        <span>Search the Codex…</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow"><span class="ledger-rule"></span> A REFERENCE, NOT A COURSE</div>
+    <h1 class="hero-title">Every trading concept, kept in <em>one ledger.</em></h1>
+    <p class="hero-sub">Trader's Codex is a free, ad-free encyclopedia of trading and markets — from what a stock exchange actually does, to order blocks and Wyckoff accumulation. No signals. Nothing to purchase. Just the reference.</p>
+    <div class="hero-search">
+      <input type="text" placeholder="Try “stop loss”, “RSI”, or “Dow Theory”" onfocus="openSearch()" readonly>
+      <span class="go">Search</span>
+    </div>
+    <div class="hero-tags">
+      <a href="article.html?slug=order-types">Order Types</a>
+      <a href="article.html?slug=risk-management">Risk Management</a>
+      <a href="article.html?slug=candlestick-patterns">Candlestick Patterns</a>
+      <a href="article.html?slug=trading-psychology">Trading Psychology</a>
+      <a href="article.html?slug=options-trading">Options Trading</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="folio-tag">SAMPLE WATCHLIST — ILLUSTRATIVE, NOT LIVE DATA</div>
+    <div class="ticker-row"><span class="ticker-sym">NIFTY 50</span><span class="ticker-up">▲ 0.41%</span></div>
+    <div class="ticker-row"><span class="ticker-sym">SENSEX</span><span class="ticker-up">▲ 0.38%</span></div>
+    <div class="ticker-row"><span class="ticker-sym">BANK NIFTY</span><span class="ticker-down">▼ 0.22%</span></div>
+    <div class="ticker-row"><span class="ticker-sym">USD/INR</span><span class="ticker-down">▼ 0.05%</span></div>
+    <div class="ticker-row"><span class="ticker-sym">BTC/USDT</span><span class="ticker-up">▲ 1.86%</span></div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat"><span class="num">12</span><span class="label">Sections, foundations to advanced</span></div>
+    <div class="stat"><span class="num">140+</span><span class="label">Entries mapped in the index</span></div>
+    <div class="stat"><span class="num">0</span><span class="label">Signals sold, courses pitched</span></div>
+    <div class="stat"><span class="num">Free</span><span class="label">Always, no account required</span></div>
+  </div>
+</div>
+
+<section class="section" id="browse">
+  <div class="section-head">
+    <div>
+      <div class="folio-tag">BROWSE BY SECTION</div>
+      <h2 class="section-title">Twelve sections, one sequence</h2>
+    </div>
+  </div>
+  <div class="cat-grid" id="category-grid"></div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="folio-tag">ENTRY POINTS</div>
+      <h2 class="section-title">Recommended starting points</h2>
+    </div>
+  </div>
+  <div class="topic-list" id="starting-points"></div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="section-head">
+    <div>
+      <div class="folio-tag">THE LEARNING ROADMAP</div>
+      <h2 class="section-title">How the Codex is meant to be read</h2>
+    </div>
+  </div>
+  <div class="roadmap">
+    <div class="roadmap-step">
+      <div class="stage">STAGE 1 — WEEKS 1–2</div>
+      <h4>Foundations &amp; Market Structure</h4>
+      <p>What a market is, who the participants are, and how an order actually reaches an exchange. No charts yet.</p>
+    </div>
+    <div class="roadmap-step">
+      <div class="stage">STAGE 2 — WEEKS 3–4</div>
+      <h4>Accounts, Orders &amp; Trading Styles</h4>
+      <p>Opening a demat and trading account, the order types you'll place, and choosing a holding period that fits your life.</p>
+    </div>
+    <div class="roadmap-step">
+      <div class="stage">STAGE 3 — WEEKS 5–8</div>
+      <h4>Technical &amp; Fundamental Analysis</h4>
+      <p>Reading candles, indicators, and financial statements — the two lenses traders and investors use to form a view.</p>
+    </div>
+    <div class="roadmap-step">
+      <div class="stage">STAGE 4 — WEEKS 9–11</div>
+      <h4>Price Action, Smart Money &amp; Strategy</h4>
+      <p>Patterns, structure, and liquidity concepts — how a view becomes an actual setup with defined entries and exits.</p>
+    </div>
+    <div class="roadmap-step">
+      <div class="stage">STAGE 5 — ONGOING</div>
+      <h4>Risk, Psychology &amp; Practice</h4>
+      <p>The section every trader underrates until it's expensive not to know it. Read this stage more than once.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="quote-block">
+    "Be fearful when others are greedy, and greedy when others are fearful."
+    <cite>— WARREN BUFFETT, ON MARKET SENTIMENT</cite>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="folio-tag">BEFORE YOU START</div>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+  </div>
+  <div id="home-faq">
+    <div class="accordion-item">
+      <div class="accordion-q" onclick="toggleAccordion(this)"><span>Is this financial advice?</span><span class="chev">+</span></div>
+      <div class="accordion-a"><p>No. Trader's Codex is educational reference material. It does not recommend any specific security, strategy, or broker. Markets carry real risk of loss — decisions and their consequences are yours.</p></div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-q" onclick="toggleAccordion(this)"><span>Do I need to read it in order?</span><span class="chev">+</span></div>
+      <div class="accordion-a"><p>No. The roadmap is a suggestion for beginners. Every entry is written to stand on its own, with links to anything it assumes you already know.</p></div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-q" onclick="toggleAccordion(this)"><span>Is it India-specific or global?</span><span class="chev">+</span></div>
+      <div class="accordion-a"><p>Both. Market-structure entries (NSE, BSE, SEBI, taxation) are India-specific; concepts like technical analysis, risk management, and psychology apply to any market.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h5>Trader's Codex</h5>
+      <p>A free reference for people learning to trade — built as a book, not a funnel.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Learn</h5>
+      <a href="article.html?slug=introduction-to-financial-markets">Foundations</a>
+      <a href="article.html?slug=technical-analysis">Technical Analysis</a>
+      <a href="article.html?slug=risk-management">Risk &amp; Psychology</a>
+      <a href="article.html?slug=options-trading">Derivatives</a>
+    </div>
+    <div class="footer-col">
+      <h5>Reference</h5>
+      <a href="article.html?slug=glossary">Glossary</a>
+      <a href="article.html?slug=faq">FAQ</a>
+      <a href="article.html?slug=trading-plan-template">Trading Plan Template</a>
+      <a href="article.html?slug=position-size-calculator">Calculators</a>
+    </div>
+    <div class="footer-col">
+      <h5>Project</h5>
+      <a href="#">About</a>
+      <a href="#">Changelog</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="#">Disclaimer</a>
+      <a href="#">Privacy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Trader's Codex. Educational content only — not investment advice.</span>
+    <span>Built entry by entry.</span>
+  </div>
+</footer>
+
+<button id="back-to-top" onclick="scrollTop()" aria-label="Back to top">↑</button>
+
+<div class="search-overlay" id="search-overlay" onclick="if(event.target===this) closeSearch()">
+  <div class="search-panel">
+    <input type="text" id="search-input" placeholder="Search 140+ entries…" oninput="runSearch(this.value)" autocomplete="off">
+    <div class="search-results" id="search-results">
+      <div class="search-empty">Start typing to search across the Codex.</div>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip-box" id="tooltip-box"><strong></strong><span></span></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  // Render category grid
+  document.getElementById('category-grid').innerHTML = CODEX.map(g => `
+    <a class="cat-card" href="article.html?slug=${g.topics[0].s}">
+      <span class="num">FOLIO ${g.folio}</span>
+      <h3>${g.title}</h3>
+      <p>${g.desc}</p>
+      <span class="count">${g.topics.length} entries</span>
+    </a>
+  `).join('');
+
+  // Recommended starting points: first topic from first 6 sections
+  const starters = CODEX.slice(0, 6).map(g => g.topics[0]);
+  document.getElementById('starting-points').innerHTML = starters.map((t, i) => `
+    <a class="topic-row" href="article.html?slug=${t.s}">
+      <span class="folio">${String(i+1).padStart(2,'0')}</span>
+      <span class="title">${t.t}</span>
+      <span class="badge ${t.d}">${t.d}</span>
+      <span class="mins">${t.m} min</span>
+    </a>
+  `).join('');
+</script>
+</body>
+</html>
