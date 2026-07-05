@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Position Size Calculator — Trader's Codex</title>
+<meta name="description" content="Calculate the correct position size for a trade based on your account balance, risk percentage, entry, and stop-loss.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://traderscodex.example/calc-position-size.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">Trader's Codex <span class="mark">FOLIO Ø</span></a>
+    <nav class="topnav">
+      <a href="index.html#browse">Browse</a>
+      <a href="index.html#tools">Calculators</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</header>
+
+<div class="calc-shell">
+  <div class="breadcrumb"><a href="index.html">Codex</a> <span>/</span> <a href="index.html#tools">Calculators</a> <span>/</span> <span>Position Size Calculator</span></div>
+  <h1 class="doc-title">Position Size Calculator</h1>
+  <p class="doc-lede">Enter your account balance, risk tolerance, entry, and stop-loss to calculate exactly how many shares to trade.</p>
+
+  <div class="calc-grid">
+    <div class="calc-panel">
+      <h3>Trade Details</h3>
+      <div class="calc-field">
+        <label>Account Balance (₹)</label>
+        <input type="number" id="balance" placeholder="e.g. 100000" oninput="calculate()">
+      </div>
+      <div class="calc-field">
+        <label>Risk per Trade (%)</label>
+        <input type="number" id="riskPct" placeholder="e.g. 1" step="0.1" oninput="calculate()">
+      </div>
+      <div class="calc-field">
+        <label>Entry Price (₹)</label>
+        <input type="number" id="entry" placeholder="e.g. 500" oninput="calculate()">
+      </div>
+      <div class="calc-field">
+        <label>Stop Loss (₹)</label>
+        <input type="number" id="stopLoss" placeholder="e.g. 480" oninput="calculate()">
+      </div>
+    </div>
+
+    <div class="calc-panel">
+      <h3>Result</h3>
+      <div class="calc-result-row">
+        <span class="label">Maximum Risk (₹)</span>
+        <span class="value bad" id="maxRisk">—</span>
+      </div>
+      <div class="calc-result-row">
+        <span class="label">Position Size (shares)</span>
+        <span class="value" id="posSize">—</span>
+      </div>
+      <div class="calc-result-row">
+        <span class="label">Capital Required (₹)</span>
+        <span class="value" id="capReq">—</span>
+      </div>
+      <div class="calc-result-row">
+        <span class="label">% of Account Deployed</span>
+        <span class="value" id="pctDeployed">—</span>
+      </div>
+      <p class="calc-note">This tells you how many shares to buy so that if your stop-loss is hit, you lose no more than your defined risk percentage. See <a href="position-sizing.html">Position Sizing</a> for the full explanation.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculate(){
+    const balance = parseFloat(document.getElementById('balance').value);
+    const riskPct = parseFloat(document.getElementById('riskPct').value);
+    const entry = parseFloat(document.getElementById('entry').value);
+    const stop = parseFloat(document.getElementById('stopLoss').value);
+
+    if(isNaN(balance) || isNaN(riskPct) || isNaN(entry) || isNaN(stop)){
+      return;
+    }
+
+    const riskAmount = balance * (riskPct / 100);
+    const perShareRisk = Math.abs(entry - stop);
+
+    document.getElementById('maxRisk').textContent = '₹' + riskAmount.toFixed(2);
+
+    if(perShareRisk === 0){
+      document.getElementById('posSize').textContent = 'Set a stop-loss';
+      document.getElementById('capReq').textContent = '—';
+      document.getElementById('pctDeployed').textContent = '—';
+      return;
+    }
+
+    const shares = Math.floor(riskAmount / perShareRisk);
+    const capitalRequired = shares * entry;
+    const pctDeployed = balance > 0 ? (capitalRequired / balance) * 100 : 0;
+
+    document.getElementById('posSize').textContent = shares + ' shares';
+    document.getElementById('capReq').textContent = '₹' + capitalRequired.toFixed(2);
+    document.getElementById('pctDeployed').textContent = pctDeployed.toFixed(1) + '%';
+  }
+
+  function toggleTheme(){
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('codex-theme', next);
+  }
+  (function(){
+    const saved = localStorage.getItem('codex-theme');
+    if(saved) document.documentElement.setAttribute('data-theme', saved);
+  })();
+</script>
+</body>
+</html>

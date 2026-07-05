@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risk/Reward Calculator — Trader's Codex</title>
+<meta name="description" content="Calculate your risk-to-reward ratio before entering a trade — enter your entry, stop-loss, and target price.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://traderscodex.example/calc-risk-reward.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">Trader's Codex <span class="mark">FOLIO Ø</span></a>
+    <nav class="topnav">
+      <a href="index.html#browse">Browse</a>
+      <a href="index.html#tools">Calculators</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</header>
+
+<div class="calc-shell">
+  <div class="breadcrumb"><a href="index.html">Codex</a> <span>/</span> <a href="index.html#tools">Calculators</a> <span>/</span> <span>Risk/Reward Calculator</span></div>
+  <h1 class="doc-title">Risk/Reward Calculator</h1>
+  <p class="doc-lede">Enter your entry, stop-loss, and target price to see your risk, reward, and risk-reward ratio before you place the trade.</p>
+
+  <div class="calc-grid">
+    <div class="calc-panel">
+      <h3>Trade Details</h3>
+      <div class="calc-field">
+        <label>Entry Price (₹)</label>
+        <input type="number" id="entry" placeholder="e.g. 500" oninput="calculate()">
+      </div>
+      <div class="calc-field">
+        <label>Stop Loss (₹)</label>
+        <input type="number" id="stopLoss" placeholder="e.g. 480" oninput="calculate()">
+      </div>
+      <div class="calc-field">
+        <label>Target (₹)</label>
+        <input type="number" id="target" placeholder="e.g. 550" oninput="calculate()">
+      </div>
+    </div>
+
+    <div class="calc-panel">
+      <h3>Result</h3>
+      <div class="calc-result-row">
+        <span class="label">Direction</span>
+        <span class="value" id="direction">—</span>
+      </div>
+      <div class="calc-result-row">
+        <span class="label">Risk per share</span>
+        <span class="value bad" id="riskVal">—</span>
+      </div>
+      <div class="calc-result-row">
+        <span class="label">Reward per share</span>
+        <span class="value good" id="rewardVal">—</span>
+      </div>
+      <div class="calc-result-row">
+        <span class="label">Risk/Reward Ratio</span>
+        <span class="value" id="ratioVal">—</span>
+      </div>
+      <p class="calc-note">A ratio like 1:2 means you're risking ₹1 to potentially make ₹2. Most traders look for at least 1:1.5 to 1:2 before taking a trade. See <a href="risk-reward-ratio.html">Risk-Reward Ratio</a> for the full explanation.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calculate(){
+    const entry = parseFloat(document.getElementById('entry').value);
+    const stop = parseFloat(document.getElementById('stopLoss').value);
+    const target = parseFloat(document.getElementById('target').value);
+
+    if(isNaN(entry) || isNaN(stop) || isNaN(target)){
+      return;
+    }
+
+    const isLong = target > entry;
+    document.getElementById('direction').textContent = isLong ? 'Long (buy)' : 'Short (sell)';
+
+    const risk = Math.abs(entry - stop);
+    const reward = Math.abs(target - entry);
+
+    document.getElementById('riskVal').textContent = '₹' + risk.toFixed(2);
+    document.getElementById('rewardVal').textContent = '₹' + reward.toFixed(2);
+
+    if(risk === 0){
+      document.getElementById('ratioVal').textContent = 'Set a stop-loss';
+    } else {
+      const ratio = reward / risk;
+      document.getElementById('ratioVal').textContent = '1 : ' + ratio.toFixed(2);
+    }
+  }
+
+  function toggleTheme(){
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('codex-theme', next);
+  }
+  (function(){
+    const saved = localStorage.getItem('codex-theme');
+    if(saved) document.documentElement.setAttribute('data-theme', saved);
+  })();
+</script>
+</body>
+</html>
