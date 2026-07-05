@@ -23,10 +23,10 @@
   <div class="topbar-inner">
     <a href="index.html" class="brand">Trader's Codex <span class="mark">FOLIO Ø</span></a>
     <nav class="topnav">
-      <a href="article.html?slug=introduction-to-financial-markets">Browse</a>
+      <a href="introduction-to-financial-markets.html">Browse</a>
       <a href="#roadmap">Roadmap</a>
-      <a href="article.html?slug=glossary">Glossary</a>
-      <a href="article.html?slug=faq">FAQ</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="faq.html">FAQ</a>
     </nav>
     <div class="topbar-actions">
       <button class="search-trigger" onclick="openSearch()">
@@ -48,11 +48,11 @@
       <span class="go">Search</span>
     </div>
     <div class="hero-tags">
-      <a href="article.html?slug=order-types">Order Types</a>
-      <a href="article.html?slug=risk-management">Risk Management</a>
-      <a href="article.html?slug=candlestick-patterns">Candlestick Patterns</a>
-      <a href="article.html?slug=trading-psychology">Trading Psychology</a>
-      <a href="article.html?slug=options-trading">Options Trading</a>
+      <a href="order-types.html">Order Types</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+      <a href="options-trading.html">Options Trading</a>
     </div>
   </div>
   <div class="hero-visual">
@@ -168,17 +168,17 @@
     </div>
     <div class="footer-col">
       <h5>Learn</h5>
-      <a href="article.html?slug=introduction-to-financial-markets">Foundations</a>
-      <a href="article.html?slug=technical-analysis">Technical Analysis</a>
-      <a href="article.html?slug=risk-management">Risk &amp; Psychology</a>
-      <a href="article.html?slug=options-trading">Derivatives</a>
+      <a href="introduction-to-financial-markets.html">Foundations</a>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="risk-management.html">Risk &amp; Psychology</a>
+      <a href="options-trading.html">Derivatives</a>
     </div>
     <div class="footer-col">
       <h5>Reference</h5>
-      <a href="article.html?slug=glossary">Glossary</a>
-      <a href="article.html?slug=faq">FAQ</a>
-      <a href="article.html?slug=trading-plan-template">Trading Plan Template</a>
-      <a href="article.html?slug=position-size-calculator">Calculators</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="faq.html">FAQ</a>
+      <a href="trading-plan-template.html">Trading Plan Template</a>
+      <a href="position-size-calculator.html">Calculators</a>
     </div>
     <div class="footer-col">
       <h5>Project</h5>
@@ -216,7 +216,7 @@
 <script>
   // Render category grid
   document.getElementById('category-grid').innerHTML = CODEX.map(g => `
-    <a class="cat-card" href="article.html?slug=${g.topics[0].s}">
+    <a class="cat-card" href="${g.topics[0].s}.html">
       <span class="num">FOLIO ${g.folio}</span>
       <h3>${g.title}</h3>
       <p>${g.desc}</p>
@@ -227,7 +227,7 @@
   // Recommended starting points: first topic from first 6 sections
   const starters = CODEX.slice(0, 6).map(g => g.topics[0]);
   document.getElementById('starting-points').innerHTML = starters.map((t, i) => `
-    <a class="topic-row" href="article.html?slug=${t.s}">
+    <a class="topic-row" href="${t.s}.html">
       <span class="folio">${String(i+1).padStart(2,'0')}</span>
       <span class="title">${t.t}</span>
       <span class="badge ${t.d}">${t.d}</span>

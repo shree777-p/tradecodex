@@ -26,7 +26,7 @@ function renderSidebar(activeSlug){
     const isCollapsed = collapsedState[group.id];
     const links = group.topics.map(topic => {
       const active = topic.s === activeSlug ? 'active' : '';
-      return `<a href="article.html?slug=${topic.s}" class="${active}">${topic.t}</a>`;
+      return `<a href="${topic.s}.html" class="${active}">${topic.t}</a>`;
     }).join('');
     return `
       <div class="sidebar-group ${isCollapsed ? 'collapsed' : ''}" data-group="${group.id}">
@@ -73,7 +73,7 @@ function runSearch(query){
     return;
   }
   results.innerHTML = matches.map(m => `
-    <a class="search-result" href="article.html?slug=${m.s}">
+    <a class="search-result" href="${m.s}.html">
       <span>${m.t}</span>
       <span class="tag">${m.group}</span>
     </a>`).join('');

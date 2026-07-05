@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breakout Trading — Trader's Codex</title>
+<meta name="description" content="Breakout trading enters a position as price decisively moves beyond a defined level — a resistance line, a chart pattern boundary, a range — betting that the move will continue rather than reverse.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://traderscodex.example/breakout-trading.html">
+<meta property="og:site_name" content="Trader's Codex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Breakout Trading — Trader's Codex">
+<meta property="og:description" content="Breakout trading enters a position as price decisively moves beyond a defined level — a resistance line, a chart pattern boundary, a range — betting that the move will continue rather than reverse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn sidebar-collapse-btn" onclick="toggleMobileSidebar()" aria-label="Toggle sidebar">☰</button>
+    <a href="index.html" class="brand">Trader's Codex <span class="mark">FOLIO Ø</span></a>
+    <nav class="topnav">
+      <a href="index.html#browse">Browse</a>
+      <a href="index.html#roadmap">Roadmap</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="search-trigger" onclick="openSearch()">
+        <span>Search the Codex…</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</header>
+
+<div class="doc-shell">
+  <aside class="doc-sidebar" id="doc-sidebar">
+    <div class="sidebar-search" onclick="openSearch()">🔍 Quick find…</div>
+    <div id="sidebar-groups"><div class="sidebar-group" data-group="foundations">
+  <div class="sidebar-group-title" onclick="toggleGroup('foundations')">
+    <span>I · Foundations</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="introduction-to-financial-markets.html" class="">Introduction to Financial Markets</a><a href="history-of-markets.html" class="">History of Markets</a><a href="what-is-trading.html" class="">What Is Trading</a><a href="investment-vs-trading.html" class="">Investment vs Trading</a><a href="stock-market-basics.html" class="">Stock Market Basics</a></div>
+</div>
+<div class="sidebar-group" data-group="market-structure">
+  <div class="sidebar-group-title" onclick="toggleGroup('market-structure')">
+    <span>II · Market Structure</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="equity.html" class="">Equity</a><a href="indices.html" class="">Indices</a><a href="ipo.html" class="">IPO</a><a href="fpo.html" class="">FPO</a><a href="market-participants.html" class="">Market Participants</a><a href="stock-exchanges.html" class="">Stock Exchanges</a><a href="nse.html" class="">NSE</a><a href="bse.html" class="">BSE</a><a href="global-exchanges.html" class="">Global Exchanges</a><a href="sebi.html" class="">SEBI</a></div>
+</div>
+<div class="sidebar-group" data-group="getting-started">
+  <div class="sidebar-group-title" onclick="toggleGroup('getting-started')">
+    <span>III · Getting Started</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="brokers.html" class="">Brokers</a><a href="demat-account.html" class="">Demat Account</a><a href="trading-account.html" class="">Trading Account</a><a href="kyc.html" class="">KYC</a><a href="order-types.html" class="">Order Types</a><a href="market-orders.html" class="">Market Orders</a><a href="limit-orders.html" class="">Limit Orders</a><a href="stop-loss.html" class="">Stop Loss</a><a href="stop-limit.html" class="">Stop Limit</a><a href="gtt-orders.html" class="">GTT Orders</a><a href="mis.html" class="">MIS</a><a href="cnc.html" class="">CNC</a></div>
+</div>
+<div class="sidebar-group" data-group="trading-styles">
+  <div class="sidebar-group-title" onclick="toggleGroup('trading-styles')">
+    <span>IV · Trading Styles</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="intraday-trading.html" class="">Intraday Trading</a><a href="swing-trading.html" class="">Swing Trading</a><a href="scalping.html" class="">Scalping</a><a href="positional-trading.html" class="">Positional Trading</a><a href="long-term-investing.html" class="">Long-Term Investing</a></div>
+</div>
+<div class="sidebar-group" data-group="technical-analysis">
+  <div class="sidebar-group-title" onclick="toggleGroup('technical-analysis')">
+    <span>V · Technical Analysis</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="technical-analysis.html" class="">Technical Analysis</a><a href="fundamental-analysis.html" class="">Fundamental Analysis</a><a href="candlestick-charts.html" class="">Candlestick Charts</a><a href="ohlc.html" class="">OHLC</a><a href="chart-types.html" class="">Chart Types</a><a href="timeframes.html" class="">Timeframes</a><a href="support.html" class="">Support</a><a href="resistance.html" class="">Resistance</a><a href="trendlines.html" class="">Trendlines</a><a href="channels.html" class="">Channels</a><a href="moving-averages.html" class="">Moving Averages</a><a href="ema.html" class="">EMA</a><a href="sma.html" class="">SMA</a><a href="vwap.html" class="">VWAP</a><a href="rsi.html" class="">RSI</a><a href="macd.html" class="">MACD</a><a href="bollinger-bands.html" class="">Bollinger Bands</a><a href="atr.html" class="">ATR</a><a href="adx.html" class="">ADX</a><a href="volume.html" class="">Volume</a><a href="open-interest.html" class="">Open Interest</a><a href="fibonacci.html" class="">Fibonacci</a><a href="dow-theory.html" class="">Dow Theory</a><a href="elliott-wave.html" class="">Elliott Wave</a><a href="wyckoff-method.html" class="">Wyckoff Method</a></div>
+</div>
+<div class="sidebar-group" data-group="smart-money">
+  <div class="sidebar-group-title" onclick="toggleGroup('smart-money')">
+    <span>VI · Smart Money Concepts</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="market-structure.html" class="">Market Structure</a><a href="liquidity.html" class="">Liquidity</a><a href="smart-money-concepts.html" class="">Smart Money Concepts</a><a href="ict-concepts.html" class="">ICT Concepts</a><a href="break-of-structure.html" class="">Break of Structure</a><a href="change-of-character.html" class="">Change of Character</a><a href="supply-and-demand.html" class="">Supply & Demand</a><a href="order-blocks.html" class="">Order Blocks</a><a href="fair-value-gap.html" class="">Fair Value Gap</a><a href="liquidity-sweeps.html" class="">Liquidity Sweeps</a><a href="institutional-trading-concepts.html" class="">Institutional Trading Concepts</a></div>
+</div>
+<div class="sidebar-group" data-group="price-action">
+  <div class="sidebar-group-title" onclick="toggleGroup('price-action')">
+    <span>VII · Price Action & Strategy</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="price-action.html" class="">Price Action</a><a href="candlestick-patterns.html" class="">Candlestick Patterns</a><a href="chart-patterns.html" class="">Chart Patterns</a><a href="continuation-patterns.html" class="">Continuation Patterns</a><a href="reversal-patterns.html" class="">Reversal Patterns</a><a href="breakout-trading.html" class="active">Breakout Trading</a><a href="pullback-trading.html" class="">Pullback Trading</a><a href="momentum-trading.html" class="">Momentum Trading</a><a href="gap-trading.html" class="">Gap Trading</a><a href="trend-following.html" class="">Trend Following</a><a href="mean-reversion.html" class="">Mean Reversion</a></div>
+</div>
+<div class="sidebar-group" data-group="risk-psychology">
+  <div class="sidebar-group-title" onclick="toggleGroup('risk-psychology')">
+    <span>VIII · Risk & Psychology</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="risk-management.html" class="">Risk Management</a><a href="position-sizing.html" class="">Position Sizing</a><a href="risk-reward-ratio.html" class="">Risk-Reward Ratio</a><a href="compounding.html" class="">Compounding</a><a href="trading-journal.html" class="">Trading Journal</a><a href="trading-psychology.html" class="">Trading Psychology</a><a href="emotional-control.html" class="">Emotional Control</a><a href="discipline.html" class="">Discipline</a><a href="fear.html" class="">Fear</a><a href="greed.html" class="">Greed</a><a href="overtrading.html" class="">Overtrading</a><a href="revenge-trading.html" class="">Revenge Trading</a><a href="money-management.html" class="">Money Management</a><a href="portfolio-management.html" class="">Portfolio Management</a></div>
+</div>
+<div class="sidebar-group" data-group="derivatives-markets">
+  <div class="sidebar-group-title" onclick="toggleGroup('derivatives-markets')">
+    <span>IX · Derivatives & Other Markets</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="options-trading.html" class="">Options Trading</a><a href="futures-trading.html" class="">Futures Trading</a><a href="commodities.html" class="">Commodities</a><a href="currency-markets.html" class="">Currency Markets</a><a href="forex-basics.html" class="">Forex Basics</a><a href="crypto-markets.html" class="">Crypto Markets</a><a href="etfs.html" class="">ETFs</a><a href="mutual-funds.html" class="">Mutual Funds</a></div>
+</div>
+<div class="sidebar-group" data-group="macro-corporate">
+  <div class="sidebar-group-title" onclick="toggleGroup('macro-corporate')">
+    <span>X · Macro & Corporate Events</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="economic-indicators.html" class="">Economic Indicators</a><a href="inflation.html" class="">Inflation</a><a href="interest-rates.html" class="">Interest Rates</a><a href="gdp.html" class="">GDP</a><a href="cpi.html" class="">CPI</a><a href="corporate-actions.html" class="">Corporate Actions</a><a href="dividends.html" class="">Dividends</a><a href="bonus-shares.html" class="">Bonus Shares</a><a href="stock-splits.html" class="">Stock Splits</a><a href="rights-issues.html" class="">Rights Issues</a><a href="quarterly-results.html" class="">Quarterly Results</a><a href="earnings-reports.html" class="">Earnings Reports</a></div>
+</div>
+<div class="sidebar-group" data-group="markets-in-practice">
+  <div class="sidebar-group-title" onclick="toggleGroup('markets-in-practice')">
+    <span>XI · Markets in Practice</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="trading-sessions.html" class="">Trading Sessions</a><a href="market-timings.html" class="">Market Timings</a><a href="world-market-time-zones.html" class="">World Market Time Zones</a><a href="taxation-basics.html" class="">Taxation Basics</a></div>
+</div>
+<div class="sidebar-group" data-group="reference">
+  <div class="sidebar-group-title" onclick="toggleGroup('reference')">
+    <span>XII · Reference & Tools</span>
+    <span class="chev">▾</span>
+  </div>
+  <div class="sidebar-links"><a href="trading-terminology.html" class="">Trading Terminology</a><a href="glossary.html" class="">Glossary</a><a href="faq.html" class="">Frequently Asked Questions</a><a href="common-beginner-mistakes.html" class="">Common Beginner Mistakes</a><a href="professional-trading-checklist.html" class="">Professional Trading Checklist</a><a href="trading-plan-template.html" class="">Trading Plan Template</a><a href="daily-routine.html" class="">Daily Routine</a><a href="weekly-routine.html" class="">Weekly Routine</a><a href="monthly-review.html" class="">Monthly Review</a><a href="books-and-documentaries.html" class="">Books & Documentaries</a><a href="learning-resources.html" class="">Podcasts & Learning Resources</a><a href="tools-and-websites.html" class="">Useful Tools & Websites</a><a href="economic-calendar.html" class="">Economic Calendar</a><a href="position-size-calculator.html" class="">Position Size Calculator</a></div>
+</div></div>
+  </aside>
+
+  <main class="doc-main">
+    <div class="breadcrumb"><a href="index.html">Codex</a> <span>/</span> <a href="index.html#browse">Price Action & Strategy</a> <span>/</span> <span>Breakout Trading</span></div>
+    <div class="doc-meta-row"><span class="badge intermediate">intermediate</span><span>7 min read</span><span>Folio VII</span></div>
+    <h1 class="doc-title">Breakout Trading</h1>
+    <p class="doc-lede">Breakout trading enters a position as price decisively moves beyond a defined level — a resistance line, a chart pattern boundary, a range — betting that the move will continue rather than reverse.</p>
+
+    <div class="doc-body">
+      <h2 id="what">What a breakout is</h2>
+      <p>A breakout occurs when price closes beyond a well-established support, resistance, or pattern boundary that had previously contained it, often accompanied by increased volume and momentum.</p>
+
+      <h2 id="entering">Entering a breakout</h2>
+      <p>Breakout traders typically enter as soon as the level is decisively broken, aiming to capture the strong initial move that often follows — accepting a less favorable entry price in exchange for higher confidence that the move is genuinely underway.</p>
+
+      <h2 id="false">False breakouts</h2>
+      <p>Not every breakout holds — price sometimes pokes through a level briefly before reversing back inside the prior range, a pattern closely related to the <a href="liquidity-sweeps.html">liquidity sweeps</a> covered in Smart Money Concepts. Waiting for a confirmed close beyond the level, and checking for supporting volume, helps filter out some (not all) false breakouts.</p>
+    </div>
+
+    <div class="doc-nav-buttons">
+      <a class="doc-nav-btn prev" href="reversal-patterns.html"><span class="dir">← Previous</span><span class="title">Reversal Patterns</span></a>
+      <a class="doc-nav-btn next" href="pullback-trading.html"><span class="dir">Next →</span><span class="title">Pullback Trading</span></a>
+    </div>
+  </main>
+
+  <aside class="doc-toc" id="doc-toc">
+    <div class="doc-toc-title">On this page</div>
+<div id="toc-links"><a href="#what">What a breakout is</a>
+<a href="#entering">Entering a breakout</a>
+<a href="#false">False breakouts</a></div>
+<div class="doc-actions">
+  <button class="icon-btn" id="bookmark-btn" onclick="toggleBookmark('breakout-trading', this)" style="width:auto;padding:0 10px;font-size:.78rem;">☆ Bookmark</button>
+</div>
+  </aside>
+</div>
+
+<button id="back-to-top" onclick="scrollTop()" aria-label="Back to top">↑</button>
+
+<div class="search-overlay" id="search-overlay" onclick="if(event.target===this) closeSearch()">
+  <div class="search-panel">
+    <input type="text" id="search-input" placeholder="Search 131 entries…" oninput="runSearch(this.value)" autocomplete="off">
+    <div class="search-results" id="search-results">
+      <div class="search-empty">Start typing to search across the Codex.</div>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip-box" id="tooltip-box"><strong></strong><span></span></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  // Restore bookmark button state and sidebar collapsed groups on load
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('bookmark-btn');
+    if (btn) btn.textContent = isBookmarked('breakout-trading') ? '★ Bookmarked' : '☆ Bookmark';
+    const collapsedState = JSON.parse(localStorage.getItem('codex-sidebar-collapsed') || '{}');
+    document.querySelectorAll('.sidebar-group').forEach(el => {
+      const id = el.dataset.group;
+      if (collapsedState[id]) el.classList.add('collapsed');
+    });
+  });
+</script>
+</body>
+</html>
