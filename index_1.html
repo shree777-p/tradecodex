@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trader's Codex — The Complete Trading Encyclopedia</title>
+<meta name="description" content="A free, ad-free reference covering Indian markets, forex, crypto, technical analysis, risk management and trading psychology — written to be read cover to cover, or looked up one entry at a time.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://traderscodex.example/index.html">
+<meta property="og:site_name" content="Trader's Codex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trader's Codex — The Complete Trading Encyclopedia">
+<meta property="og:description" content="131 free, ad-free reference entries covering Indian markets, technical analysis, risk management, and trading psychology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">Trader's Codex <span class="mark">FOLIO Ø</span></a>
+    <nav class="topnav">
+      <a href="index.html#browse">Topics</a>
+      <a href="index.html#tools">Calculators</a>
+      <a href="index.html#brokers">Brokers</a>
+      <a href="index.html#paths">Guides</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="search-trigger" onclick="openSearch()">
+        <span>Search the Codex…</span>
+        <kbd>/</kbd>
+      </button>
+      <button class="icon-btn" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div>
+    <div class="eyebrow"><span class="ledger-rule"></span> THE ENCYCLOPEDIA OF SHARE MARKET</div>
+    <h1 class="hero-title">Master the Stock Market.<br><em>One Concept</em> at a Time.</h1>
+    <p class="hero-sub">131 free, ad-free reference entries covering Indian markets, technical analysis, risk management and trading psychology — plus tools to size and plan your trades.</p>
+    <div class="hero-cta-row">
+      <a class="btn-primary" href="introduction-to-financial-markets.html">Start Learning →</a>
+      <a class="btn-secondary" href="#browse">Explore Topics</a>
+    </div>
+    <div class="stat-grid-v2 hero-stats">
+      <div class="stat-card-v2"><div class="icon">📚</div><div><span class="num">131</span><span class="label">Trading Topics</span></div></div>
+      <div class="stat-card-v2"><div class="icon">🧮</div><div><span class="num">2</span><span class="label">Calculators</span></div></div>
+      <div class="stat-card-v2"><div class="icon">🏦</div><div><span class="num">—</span><span class="label">Broker Reviews (coming soon)</span></div></div>
+      <div class="stat-card-v2"><div class="icon">🎓</div><div><span class="num">100%</span><span class="label">Beginner Friendly</span></div></div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-card-head">
+      <div class="chart-title-row">
+        <h3>Bullish Structure</h3>
+        <span class="live-badge"><span class="dot"></span> SAMPLE</span>
+      </div>
+      <div class="symbol-select">NIFTY 50 ▾</div>
+    </div>
+
+    <div class="chart-canvas-wrap">
+      <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><line x1="0" y1="0.0" x2="1200" y2="0.0" stroke="#262E39" stroke-width="1" opacity="0.5"/><line x1="0" y1="80.0" x2="1200" y2="80.0" stroke="#262E39" stroke-width="1" opacity="0.5"/><line x1="0" y1="160.0" x2="1200" y2="160.0" stroke="#262E39" stroke-width="1" opacity="0.5"/><line x1="0" y1="240.0" x2="1200" y2="240.0" stroke="#262E39" stroke-width="1" opacity="0.5"/><line x1="0" y1="320.0" x2="1200" y2="320.0" stroke="#262E39" stroke-width="1" opacity="0.5"/><line x1="0" y1="400.0" x2="1200" y2="400.0" stroke="#262E39" stroke-width="1" opacity="0.5"/><line x1="22.3" y1="354.0" x2="22.3" y2="367.8" stroke="#C1503D" stroke-width="1.3"/><rect x="14.9" y="357.4" width="14.7" height="7.4" fill="#C1503D"/><line x1="46.9" y1="340.0" x2="46.9" y2="366.6" stroke="#3FB68C" stroke-width="1.3"/><rect x="39.5" y="348.9" width="14.7" height="16.0" fill="#3FB68C"/><line x1="71.5" y1="346.0" x2="71.5" y2="364.0" stroke="#C1503D" stroke-width="1.3"/><rect x="64.1" y="348.9" width="14.7" height="9.6" fill="#C1503D"/><line x1="96.0" y1="351.8" x2="96.0" y2="372.4" stroke="#C1503D" stroke-width="1.3"/><rect x="88.7" y="358.5" width="14.7" height="8.1" fill="#C1503D"/><line x1="120.6" y1="351.1" x2="120.6" y2="367.7" stroke="#3FB68C" stroke-width="1.3"/><rect x="113.2" y="359.2" width="14.7" height="7.4" fill="#3FB68C"/><line x1="145.2" y1="337.8" x2="145.2" y2="361.6" stroke="#3FB68C" stroke-width="1.3"/><rect x="137.8" y="341.7" width="14.7" height="17.5" fill="#3FB68C"/><line x1="169.8" y1="333.3" x2="169.8" y2="343.6" stroke="#3FB68C" stroke-width="1.3"/><rect x="162.4" y="335.1" width="14.7" height="6.7" fill="#3FB68C"/><line x1="194.4" y1="312.3" x2="194.4" y2="342.5" stroke="#3FB68C" stroke-width="1.3"/><rect x="187.0" y="320.4" width="14.7" height="14.7" fill="#3FB68C"/><line x1="219.0" y1="292.1" x2="219.0" y2="326.3" stroke="#3FB68C" stroke-width="1.3"/><rect x="211.6" y="296.4" width="14.7" height="24.0" fill="#3FB68C"/><line x1="243.5" y1="272.8" x2="243.5" y2="302.5" stroke="#3FB68C" stroke-width="1.3"/><rect x="236.2" y="281.4" width="14.7" height="15.0" fill="#3FB68C"/><line x1="268.1" y1="278.4" x2="268.1" y2="291.0" stroke="#C1503D" stroke-width="1.3"/><rect x="260.8" y="281.4" width="14.7" height="6.0" fill="#C1503D"/><line x1="292.7" y1="285.6" x2="292.7" y2="297.2" stroke="#C1503D" stroke-width="1.3"/><rect x="285.3" y="287.4" width="14.7" height="6.4" fill="#C1503D"/><line x1="317.3" y1="285.4" x2="317.3" y2="296.6" stroke="#3FB68C" stroke-width="1.3"/><rect x="309.9" y="289.6" width="14.7" height="4.2" fill="#3FB68C"/><line x1="341.9" y1="263.1" x2="341.9" y2="296.0" stroke="#3FB68C" stroke-width="1.3"/><rect x="334.5" y="269.8" width="14.7" height="19.8" fill="#3FB68C"/><line x1="366.5" y1="255.7" x2="366.5" y2="274.1" stroke="#3FB68C" stroke-width="1.3"/><rect x="359.1" y="258.1" width="14.7" height="11.7" fill="#3FB68C"/><line x1="391.0" y1="234.7" x2="391.0" y2="265.1" stroke="#3FB68C" stroke-width="1.3"/><rect x="383.7" y="240.6" width="14.7" height="17.5" fill="#3FB68C"/><line x1="415.6" y1="217.1" x2="415.6" y2="241.9" stroke="#3FB68C" stroke-width="1.3"/><rect x="408.2" y="220.1" width="14.7" height="20.5" fill="#3FB68C"/><line x1="440.2" y1="217.3" x2="440.2" y2="232.0" stroke="#C1503D" stroke-width="1.3"/><rect x="432.8" y="220.1" width="14.7" height="2.6" fill="#C1503D"/><line x1="464.8" y1="210.9" x2="464.8" y2="227.2" stroke="#3FB68C" stroke-width="1.3"/><rect x="457.4" y="217.7" width="14.7" height="5.1" fill="#3FB68C"/><line x1="489.4" y1="203.9" x2="489.4" y2="220.8" stroke="#3FB68C" stroke-width="1.3"/><rect x="482.0" y="207.2" width="14.7" height="10.4" fill="#3FB68C"/><line x1="514.0" y1="201.1" x2="514.0" y2="216.3" stroke="#C1503D" stroke-width="1.3"/><rect x="506.6" y="207.2" width="14.7" height="1.5" fill="#C1503D"/><line x1="538.5" y1="197.6" x2="538.5" y2="216.2" stroke="#C1503D" stroke-width="1.3"/><rect x="531.2" y="207.4" width="14.7" height="3.4" fill="#C1503D"/><line x1="563.1" y1="208.8" x2="563.1" y2="229.9" stroke="#C1503D" stroke-width="1.3"/><rect x="555.7" y="210.7" width="14.7" height="12.6" fill="#C1503D"/><line x1="587.7" y1="214.0" x2="587.7" y2="227.7" stroke="#3FB68C" stroke-width="1.3"/><rect x="580.3" y="215.5" width="14.7" height="7.8" fill="#3FB68C"/><line x1="612.3" y1="192.2" x2="612.3" y2="224.1" stroke="#3FB68C" stroke-width="1.3"/><rect x="604.9" y="201.8" width="14.7" height="13.7" fill="#3FB68C"/><line x1="636.9" y1="185.1" x2="636.9" y2="207.5" stroke="#3FB68C" stroke-width="1.3"/><rect x="629.5" y="192.1" width="14.7" height="9.7" fill="#3FB68C"/><line x1="661.5" y1="180.5" x2="661.5" y2="196.9" stroke="#3FB68C" stroke-width="1.3"/><rect x="654.1" y="182.4" width="14.7" height="9.7" fill="#3FB68C"/><line x1="686.0" y1="151.3" x2="686.0" y2="185.7" stroke="#3FB68C" stroke-width="1.3"/><rect x="678.7" y="160.0" width="14.7" height="22.4" fill="#3FB68C"/><line x1="710.6" y1="151.0" x2="710.6" y2="172.3" stroke="#C1503D" stroke-width="1.3"/><rect x="703.2" y="160.0" width="14.7" height="3.7" fill="#C1503D"/><line x1="735.2" y1="147.3" x2="735.2" y2="166.0" stroke="#3FB68C" stroke-width="1.3"/><rect x="727.8" y="153.7" width="14.7" height="10.0" fill="#3FB68C"/><line x1="759.8" y1="134.3" x2="759.8" y2="159.4" stroke="#3FB68C" stroke-width="1.3"/><rect x="752.4" y="142.2" width="14.7" height="11.5" fill="#3FB68C"/><line x1="784.4" y1="141.0" x2="784.4" y2="155.4" stroke="#C1503D" stroke-width="1.3"/><rect x="777.0" y="142.2" width="14.7" height="4.1" fill="#C1503D"/><line x1="809.0" y1="119.7" x2="809.0" y2="147.7" stroke="#3FB68C" stroke-width="1.3"/><rect x="801.6" y="123.4" width="14.7" height="22.8" fill="#3FB68C"/><line x1="833.5" y1="94.9" x2="833.5" y2="128.7" stroke="#3FB68C" stroke-width="1.3"/><rect x="826.2" y="96.6" width="14.7" height="26.8" fill="#3FB68C"/><line x1="858.1" y1="77.2" x2="858.1" y2="98.7" stroke="#3FB68C" stroke-width="1.3"/><rect x="850.7" y="84.9" width="14.7" height="11.7" fill="#3FB68C"/><line x1="882.7" y1="72.8" x2="882.7" y2="93.6" stroke="#3FB68C" stroke-width="1.3"/><rect x="875.3" y="76.1" width="14.7" height="8.8" fill="#3FB68C"/><line x1="907.3" y1="70.4" x2="907.3" y2="86.9" stroke="#C1503D" stroke-width="1.3"/><rect x="899.9" y="76.1" width="14.7" height="3.4" fill="#C1503D"/><line x1="931.9" y1="69.7" x2="931.9" y2="88.6" stroke="#C1503D" stroke-width="1.3"/><rect x="924.5" y="79.5" width="14.7" height="2.3" fill="#C1503D"/><line x1="956.5" y1="72.5" x2="956.5" y2="84.8" stroke="#3FB68C" stroke-width="1.3"/><rect x="949.1" y="74.5" width="14.7" height="7.3" fill="#3FB68C"/><line x1="981.0" y1="62.9" x2="981.0" y2="77.5" stroke="#3FB68C" stroke-width="1.3"/><rect x="973.7" y="65.9" width="14.7" height="8.6" fill="#3FB68C"/><line x1="1005.6" y1="55.7" x2="1005.6" y2="74.9" stroke="#3FB68C" stroke-width="1.3"/><rect x="998.2" y="58.7" width="14.7" height="7.2" fill="#3FB68C"/><line x1="1030.2" y1="55.6" x2="1030.2" y2="69.1" stroke="#C1503D" stroke-width="1.3"/><rect x="1022.8" y="58.7" width="14.7" height="3.5" fill="#C1503D"/><line x1="1054.8" y1="52.9" x2="1054.8" y2="76.5" stroke="#C1503D" stroke-width="1.3"/><rect x="1047.4" y="62.2" width="14.7" height="8.4" fill="#C1503D"/><line x1="1079.4" y1="45.6" x2="1079.4" y2="73.2" stroke="#3FB68C" stroke-width="1.3"/><rect x="1072.0" y="53.7" width="14.7" height="16.8" fill="#3FB68C"/><line x1="1104.0" y1="48.3" x2="1104.0" y2="58.8" stroke="#3FB68C" stroke-width="1.3"/><rect x="1096.6" y="53.0" width="14.7" height="1.5" fill="#3FB68C"/><line x1="1128.5" y1="27.6" x2="1128.5" y2="54.9" stroke="#3FB68C" stroke-width="1.3"/><rect x="1121.2" y="37.3" width="14.7" height="15.8" fill="#3FB68C"/><line x1="1153.1" y1="27.9" x2="1153.1" y2="40.4" stroke="#3FB68C" stroke-width="1.3"/><rect x="1145.8" y="36.5" width="14.7" height="1.5" fill="#3FB68C"/><line x1="1177.7" y1="29.5" x2="1177.7" y2="39.9" stroke="#3FB68C" stroke-width="1.3"/><rect x="1170.3" y="34.2" width="14.7" height="2.3" fill="#3FB68C"/><path d="M 22.3,364.9 L 46.9,356.9 L 71.5,357.4 L 96.0,359.7 L 120.6,359.6 L 145.2,356.6 L 169.8,351.7 L 194.4,346.9 L 219.0,336.6 L 243.5,322.4 L 268.1,310.4 L 292.7,302.4 L 317.3,294.8 L 341.9,286.4 L 366.5,280.0 L 391.0,273.2 L 415.6,262.0 L 440.2,250.2 L 464.8,238.2 L 489.4,227.7 L 514.0,219.3 L 538.5,214.3 L 563.1,214.8 L 587.7,213.6 L 612.3,211.0 L 636.9,208.5 L 661.5,204.3 L 686.0,195.9 L 710.6,185.9 L 735.2,175.6 L 759.8,165.7 L 784.4,158.0 L 809.0,148.2 L 833.5,137.6 L 858.1,124.5 L 882.7,111.6 L 907.3,101.1 L 931.9,90.4 L 956.5,82.3 L 981.0,77.1 L 1005.6,72.8 L 1030.2,70.4 L 1054.8,68.9 L 1079.4,64.3 L 1104.0,60.7 L 1128.5,55.9 L 1153.1,52.2 L 1177.7,47.5" fill="none" stroke="#C9A227" stroke-width="2.2" opacity="0.9"/></svg>
+      <div class="chart-y-labels">
+        <span>24,578.53</span>
+        <span>24,415.47</span>
+        <span>24,252.41</span>
+        <span class="current">24,508.78</span>
+        <span>24,089.35</span>
+        <span>23,926.28</span>
+        <span>23,763.22</span>
+      </div>
+    </div>
+    <div class="chart-volume-wrap"><svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><rect x="14.9" y="36.0" width="14.7" height="24.0" fill="#C1503D" opacity="0.55"/><rect x="39.5" y="3.7" width="14.7" height="56.3" fill="#3FB68C" opacity="0.55"/><rect x="64.1" y="26.7" width="14.7" height="33.3" fill="#C1503D" opacity="0.55"/><rect x="88.7" y="6.7" width="14.7" height="53.3" fill="#C1503D" opacity="0.55"/><rect x="113.2" y="21.6" width="14.7" height="38.4" fill="#3FB68C" opacity="0.55"/><rect x="137.8" y="45.6" width="14.7" height="14.4" fill="#3FB68C" opacity="0.55"/><rect x="162.4" y="0.0" width="14.7" height="60.0" fill="#3FB68C" opacity="0.55"/><rect x="187.0" y="7.9" width="14.7" height="52.1" fill="#3FB68C" opacity="0.55"/><rect x="211.6" y="1.5" width="14.7" height="58.5" fill="#3FB68C" opacity="0.55"/><rect x="236.2" y="3.5" width="14.7" height="56.5" fill="#3FB68C" opacity="0.55"/><rect x="260.8" y="7.3" width="14.7" height="52.7" fill="#C1503D" opacity="0.55"/><rect x="285.3" y="40.0" width="14.7" height="20.0" fill="#C1503D" opacity="0.55"/><rect x="309.9" y="24.7" width="14.7" height="35.3" fill="#3FB68C" opacity="0.55"/><rect x="334.5" y="37.7" width="14.7" height="22.3" fill="#3FB68C" opacity="0.55"/><rect x="359.1" y="28.8" width="14.7" height="31.2" fill="#3FB68C" opacity="0.55"/><rect x="383.7" y="45.2" width="14.7" height="14.8" fill="#3FB68C" opacity="0.55"/><rect x="408.2" y="29.8" width="14.7" height="30.2" fill="#3FB68C" opacity="0.55"/><rect x="432.8" y="0.7" width="14.7" height="59.3" fill="#C1503D" opacity="0.55"/><rect x="457.4" y="35.3" width="14.7" height="24.7" fill="#3FB68C" opacity="0.55"/><rect x="482.0" y="10.4" width="14.7" height="49.6" fill="#3FB68C" opacity="0.55"/><rect x="506.6" y="26.2" width="14.7" height="33.8" fill="#C1503D" opacity="0.55"/><rect x="531.2" y="27.7" width="14.7" height="32.3" fill="#C1503D" opacity="0.55"/><rect x="555.7" y="2.0" width="14.7" height="58.0" fill="#C1503D" opacity="0.55"/><rect x="580.3" y="0.2" width="14.7" height="59.8" fill="#3FB68C" opacity="0.55"/><rect x="604.9" y="21.3" width="14.7" height="38.7" fill="#3FB68C" opacity="0.55"/><rect x="629.5" y="13.5" width="14.7" height="46.5" fill="#3FB68C" opacity="0.55"/><rect x="654.1" y="40.6" width="14.7" height="19.4" fill="#3FB68C" opacity="0.55"/><rect x="678.7" y="33.8" width="14.7" height="26.2" fill="#3FB68C" opacity="0.55"/><rect x="703.2" y="1.5" width="14.7" height="58.5" fill="#C1503D" opacity="0.55"/><rect x="727.8" y="20.2" width="14.7" height="39.8" fill="#3FB68C" opacity="0.55"/><rect x="752.4" y="22.0" width="14.7" height="38.0" fill="#3FB68C" opacity="0.55"/><rect x="777.0" y="12.1" width="14.7" height="47.9" fill="#C1503D" opacity="0.55"/><rect x="801.6" y="45.3" width="14.7" height="14.7" fill="#3FB68C" opacity="0.55"/><rect x="826.2" y="20.0" width="14.7" height="40.0" fill="#3FB68C" opacity="0.55"/><rect x="850.7" y="23.9" width="14.7" height="36.1" fill="#3FB68C" opacity="0.55"/><rect x="875.3" y="7.1" width="14.7" height="52.9" fill="#3FB68C" opacity="0.55"/><rect x="899.9" y="40.4" width="14.7" height="19.6" fill="#C1503D" opacity="0.55"/><rect x="924.5" y="1.9" width="14.7" height="58.1" fill="#C1503D" opacity="0.55"/><rect x="949.1" y="44.2" width="14.7" height="15.8" fill="#3FB68C" opacity="0.55"/><rect x="973.7" y="39.1" width="14.7" height="20.9" fill="#3FB68C" opacity="0.55"/><rect x="998.2" y="19.4" width="14.7" height="40.6" fill="#3FB68C" opacity="0.55"/><rect x="1022.8" y="15.6" width="14.7" height="44.4" fill="#C1503D" opacity="0.55"/><rect x="1047.4" y="36.7" width="14.7" height="23.3" fill="#C1503D" opacity="0.55"/><rect x="1072.0" y="42.2" width="14.7" height="17.8" fill="#3FB68C" opacity="0.55"/><rect x="1096.6" y="5.3" width="14.7" height="54.7" fill="#3FB68C" opacity="0.55"/><rect x="1121.2" y="36.2" width="14.7" height="23.8" fill="#3FB68C" opacity="0.55"/><rect x="1145.8" y="19.5" width="14.7" height="40.5" fill="#3FB68C" opacity="0.55"/><rect x="1170.3" y="18.3" width="14.7" height="41.7" fill="#3FB68C" opacity="0.55"/></svg></div>
+
+    <div class="timeframe-row">
+      <button class="tf-btn active">1D</button>
+      <button class="tf-btn">1W</button>
+      <button class="tf-btn">1M</button>
+      <button class="tf-btn">3M</button>
+      <button class="tf-btn">6M</button>
+      <button class="tf-btn">1Y</button>
+      <button class="tf-btn">5Y</button>
+      <button class="tf-btn">ALL</button>
+      <span class="tf-spacer"></span>
+      <span class="tf-icon active">📊</span>
+      <span class="tf-icon">📈</span>
+      <span class="tf-icon">⛶</span>
+    </div>
+
+    <div class="ticker-list-v2">
+      <div class="ticker-row-v2">
+        <div class="sym-badge b1">50</div>
+        <div class="ticker-name">NIFTY 50<span class="exch">NSE</span></div>
+        <div class="ticker-price-v2">24,725.85</div>
+        <div class="ticker-chg-v2" style="color:var(--bull);">▲ 0.52%<span class="pts">+128.60</span></div>
+        <div class="ticker-spark"><svg viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0.0,32.0 L 5.3,28.7 L 10.5,25.8 L 15.8,25.4 L 21.1,23.8 L 26.3,22.5 L 31.6,20.1 L 36.8,17.2 L 42.1,17.5 L 47.4,18.2 L 52.6,14.9 L 57.9,13.7 L 63.2,10.8 L 68.4,11.6 L 73.7,10.3 L 78.9,7.6 L 84.2,7.3 L 89.5,3.5 L 94.7,0.0 L 100.0,0.7" fill="none" stroke="#3FB68C" stroke-width="2"/></svg></div>
+      </div>
+      <div class="ticker-row-v2">
+        <div class="sym-badge b2">S</div>
+        <div class="ticker-name">SENSEX<span class="exch">BSE</span></div>
+        <div class="ticker-price-v2">81,389.45</div>
+        <div class="ticker-chg-v2" style="color:var(--bull);">▲ 0.41%<span class="pts">+331.66</span></div>
+        <div class="ticker-spark"><svg viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0.0,32.0 L 5.3,28.5 L 10.5,29.0 L 15.8,29.4 L 21.1,26.4 L 26.3,23.8 L 31.6,21.6 L 36.8,21.0 L 42.1,19.0 L 47.4,17.0 L 52.6,15.2 L 57.9,15.2 L 63.2,14.1 L 68.4,13.0 L 73.7,10.6 L 78.9,6.9 L 84.2,3.4 L 89.5,1.7 L 94.7,0.5 L 100.0,0.0" fill="none" stroke="#3FB68C" stroke-width="2"/></svg></div>
+      </div>
+      <div class="ticker-row-v2">
+        <div class="sym-badge b3">📈</div>
+        <div class="ticker-name">BANK NIFTY<span class="exch">NSE</span></div>
+        <div class="ticker-price-v2">53,214.20</div>
+        <div class="ticker-chg-v2" style="color:var(--bull);">▲ 0.88%<span class="pts">+465.20</span></div>
+        <div class="ticker-spark"><svg viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0.0,32.0 L 5.3,30.2 L 10.5,29.2 L 15.8,27.2 L 21.1,25.0 L 26.3,25.5 L 31.6,26.2 L 36.8,23.0 L 42.1,22.5 L 47.4,22.2 L 52.6,18.3 L 57.9,16.8 L 63.2,13.6 L 68.4,12.2 L 73.7,9.9 L 78.9,10.0 L 84.2,7.8 L 89.5,4.4 L 94.7,2.7 L 100.0,0.0" fill="none" stroke="#3FB68C" stroke-width="2"/></svg></div>
+      </div>
+      <div class="ticker-row-v2">
+        <div class="sym-badge b4">V</div>
+        <div class="ticker-name">INDIA VIX<span class="exch">NSE</span></div>
+        <div class="ticker-price-v2">12.45</div>
+        <div class="ticker-chg-v2" style="color:var(--bear);">▼ 2.11%<span class="pts">-0.27</span></div>
+        <div class="ticker-spark"><svg viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0.0,0.0 L 5.3,3.3 L 10.5,5.2 L 15.8,8.3 L 21.1,11.7 L 26.3,13.6 L 31.6,13.3 L 36.8,13.4 L 42.1,13.7 L 47.4,16.5 L 52.6,17.8 L 57.9,20.3 L 63.2,23.2 L 68.4,26.5 L 73.7,29.3 L 78.9,28.8 L 84.2,28.9 L 89.5,29.0 L 94.7,29.1 L 100.0,32.0" fill="none" stroke="#C1503D" stroke-width="2"/></svg></div>
+      </div>
+    </div>
+
+    <div class="disclaimer-bar">
+      <span>⏱ Market data is illustrative only and not a real-time feed.</span>
+      <a href="#">🛡 Disclaimer</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. TODAY'S TRADING INSIGHT -->
+<section class="section" style="padding-top:24px; padding-bottom:24px;">
+  <div class="section-head">
+    <div><div class="folio-tag">TODAY'S TRADING INSIGHT</div><h2 class="section-title">One idea a day</h2></div>
+  </div>
+  <div class="insight-card">
+    <p class="insight-quote" id="insight-principle">Loading…</p>
+    <div class="insight-grid">
+      <div class="insight-block"><h5>Why it matters</h5><p id="insight-explanation"></p></div>
+      <div class="insight-block"><h5>Quick tip</h5><p id="insight-tip"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ESSENTIAL TRADING TOOLS -->
+<section class="section" id="tools" style="padding-top:24px; padding-bottom:24px;">
+  <div class="section-head">
+    <div><div class="folio-tag">ESSENTIAL TRADING TOOLS</div><h2 class="section-title">Plan the trade before you take it</h2></div>
+  </div>
+  <div class="tool-grid-v2">
+    <a class="tool-card-v2" href="calc-risk-reward.html">
+      <div class="icon">⚖️</div>
+      <h3>Risk/Reward Calculator</h3>
+      <p>Enter your entry, stop-loss, and target to see your risk-reward ratio before entering a trade.</p>
+      <span class="go">Calculate →</span>
+    </a>
+    <a class="tool-card-v2" href="calc-position-size.html">
+      <div class="icon">📐</div>
+      <h3>Position Size Calculator</h3>
+      <p>Find the right number of shares to trade based on your account balance and risk tolerance.</p>
+      <span class="go">Calculate →</span>
+    </a>
+  </div>
+</section>
+
+<!-- 5. POPULAR TOPICS -->
+<section class="section" id="browse" style="padding-top:24px; padding-bottom:24px;">
+  <div class="section-head">
+    <div><div class="folio-tag">POPULAR TOPICS</div><h2 class="section-title">Where most readers start</h2></div>
+  </div>
+  <div class="cat-grid" id="popular-topics"></div>
+</section>
+
+<!-- 6. TOP BROKER REVIEWS (structural — real ratings pending) -->
+<section class="section" id="brokers" style="padding-top:24px; padding-bottom:24px;">
+  <div class="section-head">
+    <div><div class="folio-tag">TOP BROKER REVIEWS</div><h2 class="section-title">Broker comparison</h2></div>
+  </div>
+  <div class="broker-grid">
+    <div class="broker-card"><h3>Zerodha</h3><div class="tagline">Discount broker</div><span class="pending">Review pending</span></div>
+    <div class="broker-card"><h3>Upstox</h3><div class="tagline">Discount broker</div><span class="pending">Review pending</span></div>
+    <div class="broker-card"><h3>Groww</h3><div class="tagline">Discount broker</div><span class="pending">Review pending</span></div>
+    <div class="broker-card"><h3>Angel One</h3><div class="tagline">Full-service broker</div><span class="pending">Review pending</span></div>
+  </div>
+  <p class="calc-note" style="max-width:70ch;">We don't publish star ratings until we've done genuine, independently verified reviews — not invented numbers. Read <a href="brokers.html">Brokers</a> for what to evaluate yourself in the meantime.</p>
+</section>
+
+<!-- 7. MARKET SNAPSHOT -->
+<section class="section" style="padding-top:24px; padding-bottom:24px;">
+  <div class="section-head">
+    <div><div class="folio-tag">MARKET SNAPSHOT</div><h2 class="section-title">Sample layout — ready for a live feed</h2></div>
+  </div>
+  <div class="snapshot-grid">
+    <div class="snapshot-card"><div class="sym">NIFTY 50</div><span class="price">24,725.85</span><span class="chg" style="color:var(--bull);">▲ 0.50%</span></div>
+    <div class="snapshot-card"><div class="sym">SENSEX</div><span class="price">81,389.45</span><span class="chg" style="color:var(--bull);">▲ 0.38%</span></div>
+    <div class="snapshot-card"><div class="sym">BANK NIFTY</div><span class="price">53,214.20</span><span class="chg" style="color:var(--bull);">▲ 0.48%</span></div>
+    <div class="snapshot-card"><div class="sym">INDIA VIX</div><span class="price">12.45</span><span class="chg" style="color:var(--bear);">▼ 2.51%</span></div>
+  </div>
+  <p class="calc-note" style="max-width:70ch;">This is a static design sample. Wiring it to a real, licensed market-data feed is a separate step — the layout is already built to accept it without changing the design.</p>
+</section>
+
+<!-- 8. LEARNING PATHS -->
+<section class="section" id="paths" style="padding-top:24px; padding-bottom:24px;">
+  <div class="section-head">
+    <div><div class="folio-tag">START YOUR LEARNING JOURNEY</div><h2 class="section-title">Structured paths for every level</h2></div>
+  </div>
+  <div class="path-grid">
+    <a class="path-card" href="introduction-to-financial-markets.html">
+      <div class="level">Beginner</div>
+      <h3>Foundations first</h3>
+      <p>Start from what a market actually is and build up to your first trade.</p>
+      <span class="go">Start now →</span>
+    </a>
+    <a class="path-card" href="technical-analysis.html">
+      <div class="level">Intermediate</div>
+      <h3>Reading the chart</h3>
+      <p>Technical analysis, indicators, and the price action that ties them together.</p>
+      <span class="go">Start now →</span>
+    </a>
+    <a class="path-card" href="smart-money-concepts.html">
+      <div class="level">Advanced</div>
+      <h3>Institutional order flow</h3>
+      <p>Smart Money Concepts, order blocks, and the frameworks built on Wyckoff's work.</p>
+      <span class="go">Start now →</span>
+    </a>
+  </div>
+</section>
+
+<!-- 9. NEWSLETTER -->
+<section class="section" style="padding-top:24px;">
+  <div class="newsletter-card">
+    <div>
+      <h3>Stay updated with market insights</h3>
+      <p>One email covering new entries and the day's trading insight. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="newsletter">
+      <input type="email" name="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- 10. PREMIUM FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h5>Trader's Codex</h5>
+      <p>A free reference for people learning to trade — built as a book, not a funnel.</p>
+      <div style="display:flex; gap:10px; margin-top:14px;">
+        <a href="#" aria-label="Twitter" class="icon-btn">𝕏</a>
+        <a href="#" aria-label="Instagram" class="icon-btn">◎</a>
+        <a href="#" aria-label="YouTube" class="icon-btn">▶</a>
+        <a href="#" aria-label="LinkedIn" class="icon-btn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="index.html#browse">Topics</a>
+      <a href="index.html#tools">Calculators</a>
+      <a href="index.html#brokers">Brokers</a>
+      <a href="index.html#paths">Guides</a>
+    </div>
+    <div class="footer-col">
+      <h5>Popular Topics</h5>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="options-trading.html">Options Trading</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <a href="glossary.html">Glossary</a>
+      <a href="faq.html">FAQ</a>
+      <a href="trading-plan-template.html">Trading Plan Template</a>
+      <a href="economic-calendar.html">Economic Calendar</a>
+      <a href="books-and-documentaries.html">Books & Resources</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
+  <div class="footer-inner" style="grid-template-columns:1fr; padding-top:0; padding-bottom:24px;">
+    <div class="footer-col" style="max-width:100%;">
+      <h5>Disclaimer</h5>
+      <p style="max-width:90ch;">Trader's Codex is an educational platform only. We do not provide financial advice or recommendations. Please consult a qualified financial advisor before making investment decisions.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Trader's Codex. Educational content only — not investment advice.</span>
+    <span>Built entry by entry.</span>
+  </div>
+</footer>
+
+<button id="back-to-top" onclick="scrollTop()" aria-label="Back to top">↑</button>
+
+<div class="search-overlay" id="search-overlay" onclick="if(event.target===this) closeSearch()">
+  <div class="search-panel">
+    <input type="text" id="search-input" placeholder="Search 131 entries…" oninput="runSearch(this.value)" autocomplete="off">
+    <div class="search-results" id="search-results">
+      <div class="search-empty">Start typing to search across the Codex.</div>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip-box" id="tooltip-box"><strong></strong><span></span></div>
+
+<script src="data.js"></script>
+<script src="insights.js"></script>
+<script src="app.js"></script>
+<script>
+  // Today's insight
+  const today = getTodaysInsight();
+  document.getElementById('insight-principle').textContent = today.p;
+  document.getElementById('insight-explanation').textContent = today.e;
+  document.getElementById('insight-tip').textContent = today.t;
+
+  // Timeframe / chart-type buttons — visual toggle only, chart itself is a static illustration
+  document.querySelectorAll('.tf-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+  document.querySelectorAll('.tf-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+      document.querySelectorAll('.tf-icon').forEach(b => b.classList.remove('active'));
+      icon.classList.add('active');
+    });
+  });
+
+  const popularSlugs = ['technical-analysis', 'options-trading', 'risk-management', 'candlestick-patterns', 'stock-market-basics', 'trading-psychology'];
+  const popular = popularSlugs.map(s => CODEX_INDEX.find(x => x.s === s)).filter(Boolean);
+  document.getElementById('popular-topics').innerHTML = popular.map(t => `
+    <a class="cat-card" href="${t.s}.html">
+      <span class="num">${t.group}</span>
+      <h3>${t.t}</h3>
+      <p>${t.d.charAt(0).toUpperCase() + t.d.slice(1)} · ${t.m} min read</p>
+    </a>
+  `).join('');
+</script>
+</body>
+</html>
